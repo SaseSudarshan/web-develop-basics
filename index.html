@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balloon Animation</title>
+<style>
+  #balloon {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  #inflate-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+  <div id="balloon"></div>
+  <button id="inflate-btn">Inflate Balloon</button>
+
+  <script>
+    const balloon = document.getElementById('balloon');
+    const inflateBtn = document.getElementById('inflate-btn');
+
+    inflateBtn.addEventListener('click', () => {
+      // Animation logic
+      balloon.style.transition = 'height 1s, width 1s';
+      balloon.style.height = '300px';
+      balloon.style.width = '200px';
+    });
+  </script>
+</body>
+</html>
+
